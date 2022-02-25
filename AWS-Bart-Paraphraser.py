@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
-
+import tensorflow as tf
 # In[4]:
 from habana_frameworks.tensorflow import load_habana_module
 tf.compat.v1.disable_eager_execution()
