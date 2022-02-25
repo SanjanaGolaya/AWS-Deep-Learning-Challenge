@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # In[4]:
-from library_loader import load_habana_module
+from habana_frameworks.tensorflow import load_habana_module
 tf.compat.v1.disable_eager_execution()
 load_habana_module()
 
