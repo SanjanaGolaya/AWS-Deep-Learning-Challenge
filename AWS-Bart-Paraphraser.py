@@ -20,7 +20,8 @@ logging.basicConfig(level=logging.INFO)
 transformers_logger = logging.getLogger("transformers")
 transformers_logger.setLevel(logging.ERROR)
 
-#device = torch.device("hpu")
+import torch
+device = torch.device("hpu")
 # In[12]:
 
 
@@ -143,7 +144,9 @@ model = Seq2SeqModel(
     encoder_decoder_name="facebook/bart-large",
     args=model_args, use_cuda=False
 )
-
+model.to(device)
+model_inputs=inputs.to(device)
+model(model_inputs)
 model.train_model(train_df, eval_data=eval_df)
 
 to_predict = [
