@@ -8,7 +8,7 @@ import logging
 os.environ["PT_HPU_LAZY_MODE"] = "1"
 from habana_frameworks.torch.utils.library_loader import load_habana_module
 load_habana_module()
-device = torch.device("hpu")
+
 
 from simpletransformers.seq2seq import Seq2SeqModel, Seq2SeqArgs
 import pandas as pd
@@ -20,7 +20,7 @@ logging.basicConfig(level=logging.INFO)
 transformers_logger = logging.getLogger("transformers")
 transformers_logger.setLevel(logging.ERROR)
 
-
+device = torch.device("hpu")
 # In[12]:
 
 
