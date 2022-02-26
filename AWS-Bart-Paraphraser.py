@@ -144,7 +144,7 @@ model = Seq2SeqModel(
     encoder_decoder_name="facebook/bart-large",
     args=model_args, use_cuda=False
 )
-model.to(device)
+#model.to(device)
 model_inputs=inputs.to(device)
 model(model_inputs)
 model.train_model(train_df, eval_data=eval_df)
