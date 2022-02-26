@@ -74,7 +74,7 @@ eval_df = pd.concat(
 # Quora Data
 
 # The Quora Dataset is not separated into train/test, so we do it manually the first time.
-df = load_data("quora_duplicate_questions.tsv", "question1", "question2", "is_duplicate")
+df = load_data("data/quora_duplicate_questions.tsv", "question1", "question2", "is_duplicate")
 q_train, q_test = train_test_split(df)
 
 q_train.to_csv("data/quora_train.tsv", sep="\t")
