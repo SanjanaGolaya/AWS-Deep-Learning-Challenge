@@ -20,11 +20,11 @@ logging.basicConfig(level=logging.INFO)
 transformers_logger = logging.getLogger("transformers")
 transformers_logger.setLevel(logging.ERROR)
 
-device = torch.device("hpu")
+#device = torch.device("hpu")
 # In[12]:
 
 
-pwd
+#pwd
 
 
 # # **Loading Data**
