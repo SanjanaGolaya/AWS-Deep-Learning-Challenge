@@ -145,8 +145,8 @@ model = Seq2SeqModel(
     args=model_args, use_cuda=False
 )
 #model.to(device)
-model_inputs=inputs.to(device)
-model(model_inputs)
+#model_inputs=inputs.to(device)
+#model(model_inputs)
 model.train_model(train_df, eval_data=eval_df)
 
 to_predict = [
