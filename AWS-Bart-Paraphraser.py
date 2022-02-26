@@ -60,13 +60,13 @@ eval_df["prefix"] = "paraphrase"
 train_df = pd.concat(
     [
         train_df,
-        load_data("paraphrasecorpus/msr_paraphrase_train.txt", "#1 String", "#2 String", "Quality"),
+        load_data("data/msr_paraphrase_train.txt", "#1 String", "#2 String", "Quality"),
     ]
 )
 eval_df = pd.concat(
     [
         eval_df,
-        load_data("paraphrasecorpus/msr_paraphrase_test.txt", "#1 String", "#2 String", "Quality"),
+        load_data("data/msr_paraphrase_test.txt", "#1 String", "#2 String", "Quality"),
     ]
 )
 
