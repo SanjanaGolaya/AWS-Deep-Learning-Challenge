@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
-import tensorflow as tf
-# In[4]:
-from habana_frameworks.tensorflow import load_habana_module
-tf.compat.v1.disable_eager_execution()
-load_habana_module()
 
 import os
 from datetime import datetime
 import logging
+
+os.environ["PT_HPU_LAZY_MODE"] = "1"
+from habana_frameworks.torch.utils.library_loader import load_habana_module
+load_habana_module()
+device = torch.device("hpu")
 
 from simpletransformers.seq2seq import Seq2SeqModel, Seq2SeqArgs
 import pandas as pd
