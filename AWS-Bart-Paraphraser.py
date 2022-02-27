@@ -5,7 +5,7 @@ import os
 from datetime import datetime
 import logging
 
-import trnsorflow as tf
+import tensorflow as tf
 from habana_frameworks.tensorflow import load_habana_module
 load_habana_module()
 
