@@ -9,6 +9,8 @@ import tensorflow as tf
 from habana_frameworks.tensorflow import load_habana_module
 load_habana_module()
 
+import torch
+
 from simpletransformers.seq2seq import Seq2SeqModel, Seq2SeqArgs
 import pandas as pd
 from sklearn.model_selection import train_test_split
