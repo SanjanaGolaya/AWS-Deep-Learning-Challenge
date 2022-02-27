@@ -5,10 +5,9 @@ import os
 from datetime import datetime
 import logging
 
-os.environ["PT_HPU_LAZY_MODE"] = "1"
-from habana_frameworks.torch.utils.library_loader import load_habana_module
+import trnsorflow as tf
+from habana_frameworks.tensorflow import load_habana_module
 load_habana_module()
-
 
 from simpletransformers.seq2seq import Seq2SeqModel, Seq2SeqArgs
 import pandas as pd
@@ -20,8 +19,7 @@ logging.basicConfig(level=logging.INFO)
 transformers_logger = logging.getLogger("transformers")
 transformers_logger.setLevel(logging.ERROR)
 
-import torch
-device = torch.device("hpu")
+
 # In[12]:
 
 
@@ -137,7 +135,7 @@ model_args.top_k = 50
 model_args.top_p = 0.95
 model_args.train_batch_size = 8
 model_args.use_multiprocessing = False
-#model_args.wandb_project = "Paraphrasing with BART"
+model_args.wandb_project = "Paraphrasing with BART"
 
 model = Seq2SeqModel(
     encoder_decoder_type="bart",
