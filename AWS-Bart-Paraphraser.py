@@ -137,7 +137,7 @@ model_args.top_k = 50
 model_args.top_p = 0.95
 model_args.train_batch_size = 8
 model_args.use_multiprocessing = False
-model_args.wandb_project = "Paraphrasing with BART"
+#model_args.wandb_project = "Paraphrasing with BART"
 
 model = Seq2SeqModel(
     encoder_decoder_type="bart",
